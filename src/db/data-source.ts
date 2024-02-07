@@ -14,7 +14,8 @@ export const dataSourceOptions: PostgresConnectionOptions = {
   "database": process.env.DB_NAME,
   "entities": ["dist/**/*.entity.js"],
   "migrations": ["dist/migrations/*.js"],
-  "migrationsTableName": "migrations"
+  "migrationsTableName": "migrations",
+  "ssl": true
 }
 
 const dataSource = new DataSource(dataSourceOptions);
