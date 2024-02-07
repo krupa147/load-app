@@ -2,13 +2,10 @@ import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConne
 import { DataSource, DataSourceOptions } from "typeorm";
 import 'dotenv/config'
 
-
-console.log(process.env.DB_USER);
-
 export const dataSourceOptions: PostgresConnectionOptions = {
   "type": "postgres",
   "host": process.env.HOST,
-  "port": parseInt(process.env.PORT) || 5432,
+  "port": parseInt(process.env.DB_PORT) || 5432,
   "username": process.env.DB_USER,
   "password": process.env.DB_PASSWORD,
   "database": process.env.DB_NAME,
